@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script src="script.js"></script>  <!-- LINKED JAVASCRIPT -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- LINKED CSS -->
+</head>
+<body> 
+    <div class="login">
+    <h2>Login</h2>
+    <form onsubmit="return login()">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+
+        <input type="checkbox" id="show-password"> Show Password
+
+        <button type="submit" class="login-button">Login</button>
+
+        <div id="login-error" class="error" style="display: none;"></div>
+
+        <p>Don't have an account? <a href="register.html">Signup</a></p>
+    </form>
+    </div>
+
+    <script>
+        // Get the password input and "Show Password" checkbox elements
+        const passwordInput = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('show-password');
+
+        // Add an event listener to the "Show Password" checkbox
+        showPasswordCheckbox.addEventListener('change', function () {
+            // Toggle the password input's type between "password" and "text"
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>

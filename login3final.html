@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign In</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<!-- <link rel="stylesheet" href="animate.css"> -->
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="style2.css">
+    <script src="/script2.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+                <h2>Log in</h2>
+            </div>
+                    <form onsubmit="return login()">
+                        <label for="email">Email:</label>
+                        <br/>
+                        <input type="text" id="email" name="email" placeholder="Enter your email" required><br>
+                        
+                        <label for="password">Password:</label>
+                        <br/>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+                
+                        <input type="checkbox" id="show-password" > Show Password
+                        <br/>
+                
+                        <button type="submit" class="login-button">Sign in</button>
+                        <br/>
+                        <div id="login-error" class="error" style="display: none;"></div>
+                
+                        <p >Don't have an account? <a href="register2.html">Signup</a></p>
+                    </form>
+                </div>
+                
+		</div>
+	</div>
+</body>
+
+<script>
+	   // Get the password input and "Show Password" checkbox elements
+       const passwordInput = document.getElementById('password');
+       const showPasswordCheckbox = document.getElementById('show-password');
+
+       // Add an event listener to the "Show Password" checkbox
+       showPasswordCheckbox.addEventListener('change', function () {
+           // Toggle the password input's type between "password" and "text"
+           passwordInput.type = this.checked ? 'text' : 'password';
+       });
+</script>
+
+</html>

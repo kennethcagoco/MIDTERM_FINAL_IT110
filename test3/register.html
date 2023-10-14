@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">  <!-- LINKED CSS -->
+    <script src="/script.js"></script>  <!-- LINKED JAVASCRIPT -->
+</head>
+<body>
+    <div class="register">
+    <h2>Registration</h2>
+    <form onsubmit="return registerForm()">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <span class="error" id="email-error"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <span class="error" id="password-error"></span>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+        <span class="error" id="confirmPassword-error"></span><br>
+
+        <input type="checkbox" id="show-password"> Show Password
+        
+        
+
+        <button type="submit" class="Register">Register</button>
+        
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+    </div>
+
+    <script>
+        // Get the password and confirm password input elements
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const showPasswordCheckbox = document.getElementById('show-password');
+
+        // Add an event listener to the "Show Password" checkbox
+        showPasswordCheckbox.addEventListener('change', function () {
+            // Toggle the password input's type between "password" and "text"
+            passwordInput.type = this.checked ? 'text' : 'password';
+            confirmPasswordInput.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+
+</body>
+</html>

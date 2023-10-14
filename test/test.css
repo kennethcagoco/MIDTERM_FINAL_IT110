@@ -1,0 +1,73 @@
+.error {
+  color: red;
+}
+
+  body {
+  background-color: #344a72;
+  font-family: "Roboto", sans-serif;
+}
+
+.register {
+  width: 360px;
+  height: 470px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.login {
+  width: 360px;
+  height: 350px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: white;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+form {
+  width: 300px;
+  margin-left: 20px;
+}
+
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+  outline: none;
+}
+
+.Register {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+
+  .login-button {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+
+
+
+
